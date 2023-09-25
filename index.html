@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    
+    <style>
+        .review-strategy
+        {
+            background: #11011E;
+            overflow: hidden;
+        }
+        .review-strategy .card-container{
+            width: 878px;
+            height:621px;
+            border-radius: 27px;
+            border-radius: 27px;
+            background: rgba(255, 255, 255, 0.20);
+
+        }
+        .review-strategy P{
+            color: #fff;
+            text-align: justify;
+            font-family: DM Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        }
+        .review-strategy h2{
+            color: #84DBA2;
+            text-align: center;
+            font-family: DM Sans;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+        .review-strategy .card-p1{
+            width: 190px;
+            position: absolute;
+            top: 40%;
+            text-align: justify;
+            left: 0;
+        }
+        .review-strategy .card-p2{
+            width: 185px;
+            position: absolute;
+            text-align: justify;
+            top: 0;
+            right: 0;
+        }
+        .review-strategy .card-p3{
+            width: 197px;
+            position: absolute;
+            text-align: justify;
+            top: 40%;
+            right: 0;
+        }
+        .review-strategy .card-p4{
+            width: 264px;
+            position: absolute;
+            text-align: justify;
+            bottom: -110px;
+            right: 25px;
+        }
+        .review-strategy svg{
+            position: absolute;
+            top: -95px;
+            right: 180px;
+        }
+        .review-strategy .button{
+            border-radius: 94px;
+            background: #84DBA2;
+            padding: 10px 20px;
+            text-decoration: none;
+            list-style: none;
+            color: #FFF;
+            text-align: center;
+            font-family: DM Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .review-strategy .card-top-text{
+            width: 700px;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+        .review-strategy tbody, 
+        .review-strategy td,
+        .review-strategy tfoot, 
+        .review-strategy th, 
+        .review-strategy thead, 
+        .review-strategy tr{
+            border: none;
+        }
+        .review-strategy th{
+            width: 120px;
+            height: 60px;
+            text-align: center;
+            padding: 15px 0px;
+        }
+        .review-strategy td{
+            width: 100px;
+            height: 60px;
+            color: #FFF;
+            text-align: center;
+            font-family: DM Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            padding: 15px 0px;
+        }
+        .review-strategy span{
+            color: #84DBA2;
+            text-align: center;
+            font-family: DM Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            padding: 5px;
+        }
+        .review-strategy .table{
+            max-width: 830px;
+            margin: 0 auto;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            border-radius: 7px;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .review-strategy .card-top-text::after {
+            content: "";
+            position: absolute;
+            background-image: url(image/leftsideBar.png);
+            width: 100%;
+            height: 30px;
+            background-repeat: no-repeat;
+            left: -210px;
+            bottom: 0;
+        }
+        .review-strategy .card-top-text::before {
+            content: "";
+            position: absolute;
+            background-image: url(image/topbar.png);
+            width: 100%;
+            height: 30px;
+            background-repeat: no-repeat;
+            left: 210px;
+            bottom: 0;
+        }
+        .review-strategy .table::after {
+            content: "";
+            position: absolute;
+            background-image: url(image/Rectangle9561.png);
+            width: 360px;
+            height: 90px;
+            background-repeat: no-repeat;
+            bottom: 170px;
+            right: 360px;
+        }
+        .review-strategy .table::before {
+            content: "";
+            position: absolute;
+            background-image: url(image/Line36.png);
+            width: 5px;
+            height: 130px;
+            background-repeat: no-repeat;
+            bottom: 40px;
+            right: 597px;
+        }
+        .review-strategy .card-container::before{
+            content: "";
+            position: absolute;
+            background-image: url(image/bottomtextline.png);
+            width: 536px;
+            height: 43px;
+            background-repeat: no-repeat;
+            bottom: 0px;
+            right: 76px;
+        }
+        .review-strategy .card-container::after{
+            content: "";
+            position: absolute;
+            background-image: url(image/Line36.png);
+            width: 5px;
+            height: 130px;
+            background-repeat: no-repeat;
+            bottom: 40px;
+            right: 478px;
+        }
+        .review-strategy .review-container::before{
+            content: "";
+            position: absolute;
+            background-image: url(image/arrowtest.png);
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            top: 275px;
+            left: 90px;
+        }
+        .review-strategy .review-container::after{
+            content: "";
+            position: absolute;
+            background-image: url(image/arrowrighttest.png);
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            top: 275px;
+            right: 90px;
+        }
+        .review-strategy .card-p4::before{
+            content: "";
+            position: absolute;
+            background-image: url(image/arrowrighttest.png);
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            top: -35px;
+            right: 55px;
+        }
+
+        @media only screen and (max-width:1439.98px){
+            .review-strategy .card-p1{
+                width: 130px;
+                top: 25%;
+            }
+            .review-strategy .card-p2{
+                width: 140px;
+            }
+            .review-strategy .card-p3{
+                width: 140px;
+            }
+            .review-strategy .card-container {
+                width: 930px;
+                height: max-content;
+            }
+            .review-strategy .card-top-text {
+                width: 800px;
+            }
+            .review-strategy .table{
+                max-width: 800px;
+                margin-bottom: 50px;
+            }
+            .review-strategy td{
+                font-size: 12px;
+            }
+            .review-strategy span{
+                font-size: 12px;
+            }
+            .review-strategy svg {
+                right: 80px;
+            }
+            .review-strategy .card-top-text::after {
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 100%;
+                height: 30px;
+                background-repeat: no-repeat;
+                left: -210px;
+                bottom: 0;
+            }
+            .review-strategy .card-top-text::before {
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 100%;
+                height: 30px;
+                background-repeat: no-repeat;
+                left: 210px;
+                bottom: 0;
+            }
+            .review-strategy .table::after {
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 100%;
+                height: 30px;
+                background-repeat: no-repeat;
+                left: -210px;
+                bottom: 0;
+            }
+            .review-strategy .table::before {
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 360px;
+                height: 90px;
+                background-repeat: no-repeat;
+                bottom: 170px;
+                right: 360px;
+            }
+            .review-strategy .card-container::before{
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 5px;
+                height: 130px;
+                background-repeat: no-repeat;
+                bottom: 40px;
+                right: 478px;
+            }
+            .review-strategy .card-container::after{
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 5px;
+                height: 130px;
+                background-repeat: no-repeat;
+                bottom: 40px;
+                right: 597px;
+            }
+            .review-strategy .review-container::before{
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 5px;
+                height: 130px;
+                background-repeat: no-repeat;
+                bottom: 40px;
+                right: 478px;
+            }
+            .review-strategy .review-container::after{
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 5px;
+                height: 130px;
+                background-repeat: no-repeat;
+                bottom: 40px;
+                right: 478px;
+            }
+            .review-strategy .card-p4::before{
+                content: "";
+                position: absolute;
+                background-image: none;
+                width: 40px;
+                height: 40px;
+                background-repeat: no-repeat;
+                top: -35px;
+                right: 55px;
+            }
+        }
+        @media only screen and (max-width:1239.98px){
+            .review-strategy P{
+                font-size: 12px;
+            }
+            .review-strategy .card-p1{
+                width: 100px;
+                top: 45%;
+            }
+            .review-strategy .card-p2{
+                width: 110px;
+            }
+            .review-strategy .card-p3{
+                width: 110px;
+            }
+            .review-strategy .card-p4 {
+                bottom: -100px;
+            }
+            .review-strategy .card-container {
+                width: 650px;
+                height: max-content;
+            }
+            .review-strategy .card-top-text {
+                width: 550px;
+            }
+            .review-strategy .card-container-heading{
+                margin-bottom: 20px;
+            }
+            .review-strategy .table{
+                max-width: 550px;
+                margin-bottom: 50px;
+            }
+            .review-strategy td{
+                font-size: 10px;
+            }
+            .review-strategy span{
+                font-size: 10px;
+            }
+            .review-strategy svg {
+                right: 80px;
+            }
+        }
+        @media only screen and (max-width:1023.98px)
+        {
+            .review-strategy P{
+                font-size: 10px;
+            }
+            .review-strategy .card-container {
+                width: 550px;
+                height: max-content;
+            }
+            .review-strategy .card-top-text {
+                width: 480px;
+            }
+            .review-strategy .card-container-heading {
+                margin-bottom: 5px;
+            }
+            .review-strategy .card-p1{
+                width: 80px;
+                right: -10px;
+            }
+            .review-strategy .card-p2{
+                width: 75px;
+                right: 5px;
+            }
+            .review-strategy .card-p3{
+                width: 75px;
+                right: 5px;
+            }
+            .review-strategy .card-p4 {
+                bottom: -76px;
+            }
+            .review-strategy .table{
+                max-width: 480px;
+                margin-bottom: 50px;
+            }
+            .review-strategy svg {
+                right: 120px;
+                width: 120px;
+                right: 50px;
+            }
+        }
+        @media only screen and (max-width:767.98px){
+            .review-strategy h2 {
+                font-size: 16px;
+            }
+            .review-strategy P{
+                font-size: 8px;
+            }
+            .review-strategy .button {
+                padding: 7px 15px;
+                font-size: 10px;
+            }
+            .review-strategy .card-p1{
+                width: 80px;
+                top: 25%;
+                left: 5px;
+            }
+            .review-strategy .card-p2{
+                width: 75px;
+                right: 5px;
+            }
+            .review-strategy .card-p3{
+                width: 75px;
+                right: 5px;
+            }
+            .review-strategy .card-p4 {
+                width: 150px;
+                bottom: -70px;
+            }
+            .review-strategy .card-container {
+                width: 250px;
+                border-radius: 10px;
+                height: max-content;
+            }
+            .review-strategy .card-top-text {
+                width: 230px;
+            }
+            .review-strategy .table{
+                max-width: 230px;
+                margin-bottom: 20px;
+            }
+            .review-strategy th{
+                height: 30px;
+                padding: 0px;
+            }
+            .review-strategy td{
+                font-size: 4px;
+                padding: 0px;
+                height: 30px;
+            }
+            .review-strategy span{
+                font-size: 4px;
+                padding: 0px;
+            }
+            .review-strategy svg {
+                right: 70px;
+                width: 70px;
+            }
+        }
+       
+    </style>
+    <div class="review-strategy py-4 py-lg-5">
+        <div class="container">
+            <div class="review-container position-relative py-5">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center position-relative my-5">
+                        <div class="card-container">
+                            <div class="card-top-text position-relative">
+                                <div class="card-container-heading d-flex justify-content-between align-items-center">
+                                    <div class="card-container-heading-text">
+                                        <h2>CycleSpreads</h2>
+                                        <p> 10 Subscribers</p>    
+                                    </div>
+                                    <div class="card-container-heading-button">
+                                        <a class="button">Subscribe</a>
+                                    </div>
+                                </div>
+                                <p class="text-center">We’re not your average newsletter service. We started our service back in 2007 and have been perfecting our strategies ever since. We understand that no trading system is perfect, but we try our best to plan and execute each trade so that the odds of success are heavily weighted in our favor. For more information on our strategy, please visit our website at www.CycleSpreads.com</p>    
+                            </div>
+                            <div class="table">
+                                <table>
+                                    <tr>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Pre-Flight <br> Ranking</span></th>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Platform <br> Ranking</span></th>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Account <br> Sizes</span></th>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Strategies</span></th>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Monthly <br> Fees</span></th>
+                                        <th style="border-right: 3px solid rgba(255, 255, 255, 0.10); border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Total <br> Assets</span></th>
+                                        <th style="border-bottom: 3px solid rgba(255, 255, 255, 0.10);"><span>Created</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">-</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">-</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">$12000+</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">1 Strategies</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">$150</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">$7806.21</td>
+                                        <td>Jul 20,2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"><span>Strategy</span></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"><span>ROI(TWR)</span></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"><span>Custom <br> Benchmark</span></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"><span>Risk <br> Ratio</span></td>
+                                        <td><span>Data <br> Reliability</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"></td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);"><span>Put Selling <br> Strategy</span> <br> $12000+</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">-%</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">-%</td>
+                                        <td style="border-right: 3px solid rgba(255, 255, 255, 0.10);">-%</td>
+                                        <td>Low</td>
+                                    </tr>
+                                  </table>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="183" height="180" viewBox="0 0 183 180" fill="none">
+                            <path d="M8.47551 116.645C8.61072 116.845 8.79018 117.01 9.00243 117.129C9.21468 117.248 9.45508 117.319 9.7084 117.336C9.96171 117.354 10.2224 117.319 10.4739 117.232C10.7253 117.146 10.9621 117.01 11.169 116.834C11.6905 116.233 12.1524 115.586 12.5472 114.904C13.2873 113.504 13.9544 112.081 14.5896 110.642C18.9457 100.803 25.4103 92.167 32.4152 83.9106C37.6852 77.859 43.924 72.6915 50.8207 68.6657C54.4057 66.5105 58.0858 64.4948 61.8241 62.6528C68.2986 59.4579 75.1769 57.8621 81.9353 56.6356C90.8933 55.1941 99.8628 54.9285 108.606 55.846C117.931 56.7265 127.039 58.509 135.807 61.1689C143.569 63.3676 151.111 66.0963 158.385 69.337C159.546 69.8241 160.747 70.2314 161.981 70.5563C162.358 70.5605 162.741 70.4403 163.07 70.2145C163.4 69.9887 163.657 69.6698 163.803 69.3072C163.944 68.77 163.925 68.2223 163.748 67.7335C163.516 67.253 163.15 66.8586 162.689 66.5907C161.766 66.0358 160.799 65.5481 159.794 65.1307C150.871 61.5478 141.929 57.9819 132.427 55.6952C127.982 54.5949 123.473 53.5378 118.905 52.7486C114.883 52.0649 110.803 51.5917 106.681 51.3312C98.0622 50.6446 89.2557 51.0801 80.479 52.6269C69.424 54.6961 58.6521 58.9963 48.854 65.2518C44.3468 68.2212 39.9785 71.4152 35.7688 74.8194C32.4047 77.453 29.9166 80.8835 27.2183 84.0688C19.787 92.7493 13.7081 102.417 9.22409 112.687C8.82662 113.56 8.5139 114.46 8.29058 115.374C8.25512 115.817 8.31824 116.251 8.47551 116.645Z" fill="#84DBA2"/>
+                            <path d="M170.807 58.8506C168.944 57.1925 167.079 55.5511 165.225 53.8844C163.502 52.3399 161.816 50.7611 160.092 49.2166C153.136 42.9897 145.504 37.7696 136.074 35.2646C135.183 35.0373 134.271 34.8684 133.344 34.7591C132.966 34.7899 132.592 34.9319 132.271 35.1669C131.95 35.4018 131.695 35.719 131.541 36.0774C131.387 36.4359 131.34 36.8193 131.406 37.1781C131.473 37.537 131.649 37.8549 131.912 38.091C132.484 38.5133 133.135 38.8282 133.838 39.0227C142.911 41.4191 150.31 46.3695 157.005 52.3522C162.838 57.571 168.716 62.7471 173.205 69.2876C173.61 69.8684 173.935 70.5047 174.175 71.1824C174.192 71.3522 174.163 71.5288 174.093 71.6953C174.022 71.8617 173.912 72.0124 173.771 72.133C172.868 72.44 171.952 72.6861 171.029 72.8694C157.027 75.9998 142.946 78.4904 129.076 82.9261C126.251 83.7075 123.528 84.9586 121.028 86.6229C120.549 86.9697 120.112 87.3748 119.73 87.827C119.463 88.1336 119.302 88.5109 119.275 88.8934C119.248 89.276 119.357 89.6397 119.583 89.9217C119.928 90.3031 120.418 90.5291 120.96 90.5575C121.522 90.5834 122.098 90.4398 122.616 90.1454C127.691 87.1401 133.213 85.8914 138.641 84.3948C146.168 82.3345 153.733 80.6483 161.352 79.186C166.283 78.2421 171.227 76.9064 176.117 76.1218C177.25 75.8918 178.372 75.5627 179.47 75.1384C179.925 74.9194 180.298 74.5459 180.515 74.0938C180.732 73.6416 180.776 73.1447 180.638 72.704C180.516 72.1698 180.318 71.6639 180.049 71.2007C176.918 67.1962 174.372 62.6953 170.807 58.8506Z" fill="#84DBA2"/>
+                        </svg>
+                        <p class="card-p1">Check out the pre-flight and platform rankings to easily compare strategies registered on the platform. Pre-flight represents the historical performance of the Pilot before registering on the platform, relative to common investment options found in the wild. Platform ranking represents the performance of the strategy while ranked on the platform, relative to competing strategies.</p>
+                        <p class="card-p2">Click subscribe to navigate to the third party partner’s website to sign up and start trading today!</p>
+                        <p class="card-p3">Pay attention to the account minimums and monthly fees associated with the strategy</p>
+                        <p class="card-p4">Review detailed strategy performance
+                            collected on the platform, including time-weighted rate of return, a relative benchmark for comparison, and an associated risk score.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
